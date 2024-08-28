@@ -10,20 +10,20 @@ const tiposDeErro = [
 
 const mensagens = {
     first_name: {
-        valueMissing: "O campo de nome não pode estar vazio.",
+        valueMissing: "This field is required.",
         patternMismatch: "Por favor, preencha um nome válido.",
     },
     last_name: {
-        valueMissing: "O campo de último nome não pode estar vazio.",
+        valueMissing: "This field is required.",
         patternMismatch: "Por favor, preencha um nome válido.",
     },
     email: {
-        valueMissing: "O campo de e-mail não pode estar vazio.",
-        typeMismatch: "Por favor, preencha um email válido.",
+        valueMissing: "This field is required.",
+        typeMismatch: " Please enter a valid email address.",
         tooShort: "Por favor, preencha um e-mail válido."
     },
     message: {
-        valueMissing: "O campo de mensagem não pode estar vazio.",
+        valueMissing: "This field is required.",
     }
 }
 
@@ -47,7 +47,7 @@ function validarRadio() {
          }
     })
     if(!checkRadio) {
-        campoRadioMensagens.textContent = 'Selecione uma opção';
+        campoRadioMensagens.textContent = 'Please select a query type';
         return false;
     } else {
         campoRadioMensagens.textContent = '';
@@ -60,7 +60,7 @@ function validadorDoTermo() {
     const termoMensagens = document.getElementById("termo-erro");
 
     if(!termo.checked) {
-        termoMensagens.textContent = "Por favor, aceite os termos.";
+        termoMensagens.textContent = "To submit this form, please consent to being contacted.";
         return false;
     } else {
         termoMensagens.textContent = '';
