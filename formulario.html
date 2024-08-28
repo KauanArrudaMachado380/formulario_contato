@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contato</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <header class="header">
+            <div class="caixa__confirmacao">
+                <div class="caixa__titulo">
+                    <img src="images/icon-success-check.svg" alt="icone de sucesso">
+                    <h2 class="caixa__confirmacao__titulo">Message sent</h2>
+                </div>
+                <p class="caixa__confirmacao__texto">Thanks for completing the form. We'll be in touch soon!</p>
+            </div>
+        </header>
+        <section class="card">
+            <form action="" class="card__form" data-formulario>
+
+                <h1 class="card__titulo">Contact Us</h1>
+
+                <div class="campo">
+                    <fieldset class="card__campo">
+                        <label for="first_name" class="form__label">First Name *</label>
+                        <input type="text" name="first_name" id="first_name" class="form__input" required data-elementos-requeridos>
+                        <span class="mensagem__erro"></span>
+                    </fieldset>
+
+                    <fieldset class="card__campo">
+                        <label for="last_name" class="form__label">Last Name *</label>
+                        <input type="text" name="last_name" id="last_name" class="form__input" required data-elementos-requeridos>
+                        <span class="mensagem__erro"></span>
+                    </fieldset>
+                </div>
+
+                <fieldset class="card__campo">
+                    <label for="email" class="form__label">Email Address *</label>
+                    <input type="email" name="email" id="email" class="form__input" required data-elementos-requeridos>
+                    <span class="mensagem__erro"></span>
+                </fieldset>
+
+                <h2 class="card__sub-titulo">Query Type *</h2>
+
+                <fieldset class="form__query-type">
+                        <div class="query-type">
+                            <label for="consulta-geral" class="form__label form__radio" id= "radio__general" data-formulario-radio>
+                                <input type="radio" name="consulta" id="consulta-geral" class="form__input" value="general" required data-formulario-radio-elemento>
+                                General Enquiry
+                            </label>
+                            <label for="consulta-suporte" class="form__label form__radio" id="radio__support" data-formulario-radio>
+                                <input type="radio" name="consulta" id="consulta-suporte" class="form__input" value="support" data-formulario-radio-elemento>
+                                Support Request
+                            </label>
+                        </div>
+                    <span class="mensagem__erro-radio"></span>
+                </fieldset>
+
+                <fieldset class="card__campo">
+                    <label for="message" class="form__label">Message *</label>
+                    <textarea name="message" id="message" class="form__input" required data-elementos-requeridos></textarea>
+                    <span class="mensagem__erro"></span>
+                </fieldset>
+
+                <fieldset class="form__checkbox">
+                    <label for="checkbox" class="form__texto">
+                        <input type="checkbox" name="checkbox" id="checkbox" class="form__input" required>
+                        I consent to being contacted by the team *
+                    </label>
+                    <span class="mensagem__erro" id="termo-erro"></span>
+                </fieldset>
+                
+
+                <button class="formulario__botao" id="enviar" data-botao-enviar type="submit">Submit</button>
+            </form> 
+        </section>
+
+        <footer>
+
+        </footer>
+
+        <script src="./js/script.js"></script>
+    </main>
+</body>
+</html>

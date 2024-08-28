@@ -1,0 +1,332 @@
+@import url("reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root{
+
+    --cor-de-fundo: hsl(148, 38%, 91%);
+    --cor-destaque:hsl(169, 82%, 27%);
+    --cor-de-erro: hsl(0, 66%, 54%);
+    --cor-do-main: hsl(0, 0%, 100%);
+    --cor-do-texto: hsl(186, 15%, 59%);
+    --cor-do-titulo: hsl(187, 24%, 22%);
+
+    --font-family: "Karla", sans-serif;
+}
+
+body{
+    background-color: var(--cor-de-fundo);
+    font-family: var(--font-family);
+}
+
+.card{
+    background-color: var(--cor-do-main);
+    width: 350px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.card__form{
+    padding: 20px;
+    
+}
+
+.card__titulo{
+    color: var(--cor-do-titulo);
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.card__campo{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+    gap: 8px;
+}
+
+.form__label{
+    color: var(--cor-do-titulo);
+    font-size: 1rem;
+}
+
+.form__input{
+    padding: 5px;
+    font-size: 1.2rem;
+    color: var(--cor-do-titulo);
+}
+
+.query-type{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.form__query-type{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+#first_name, #last_name, #email{
+    width: 94%;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid var(--cor-do-texto);
+    margin-bottom: 10px;
+}
+
+.card__sub-titulo{
+    color: var(--cor-do-titulo);
+    font-size: 1rem;
+    padding: 10px 0;
+}
+
+.form__radio{
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid var(--cor-do-texto);
+    border-radius: 8px;
+}
+
+#consulta-geral, #consulta-suporte{
+    margin-left: 15px;
+}
+
+#message{
+    width: 96%;
+    height: 120px;
+    padding : 10px 5px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid var(--cor-do-texto);
+    margin-bottom: 10px;
+    resize: none;
+}
+
+.form__checkbox{
+    display: flex;
+
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.formulario__botao{
+    width: 90%;
+    height: 40px;
+    cursor: pointer;
+    background-color: var(--cor-destaque);
+    color: var(--cor-do-main);
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    margin: 20px 0 15px 18px;
+}
+
+.mensagem__erro{
+    color: var(--cor-de-erro);
+    padding: 2px;
+}
+
+.mensagem__erro-radio{
+    color: var(--cor-de-erro);
+    padding: 2px;
+}
+
+/* forms validations */
+
+#first_name:hover, #last_name:hover, #email:hover, #message:hover, #first_name:focus, #last_name:focus, #email:focus, #message:focus{
+    border-color: var(--cor-destaque);
+    outline: none;
+}
+
+#checkbox:checked{
+    accent-color: var(--cor-destaque);
+}
+
+.form__radio:hover, #checkbox:hover{
+    border-color: var(--cor-destaque);
+}
+
+.ativo{
+    background-color: var(--cor-de-fundo);
+    border-color: var(--cor-destaque);
+}
+
+#consulta-geral, #consulta-suporte{
+    accent-color: var(--cor-destaque);
+}
+
+/* message box*/
+
+.header{
+    display: none;
+}
+
+.caixa__confirmacao{
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto 0 auto;
+    padding: 15px 20px 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 300px;
+    height: 70px;
+    background-color: var(--cor-do-titulo);
+    color: var(--cor-do-texto);
+    border-radius: 8px;
+}
+
+.caixa__confirmacao__titulo{
+    color: var(--cor-do-main);
+}
+
+.caixa__titulo{
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px 0;
+    gap: 10px;
+}
+
+.caixa__confirmacao__texto{
+    margin-bottom: 15px;
+}
+
+/* media queries */
+
+@media (min-width: 500px){
+    .card{
+        margin-top: 15%;
+        width: 600px;
+        padding: 15px 10px;
+    }
+
+    .card__titulo{
+        font-size: 2rem;
+        padding: 10px 0 15px 0;
+        margin-bottom: 15px;
+    }
+
+    .card__sub-titulo{
+        font-size: 1.2rem;
+    }
+
+    .campo{
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .form__label{
+        font-size: 1.2rem;
+    }
+
+    .form__input{
+        padding: 5px 10px;
+    }
+
+    #first_name, #last_name{
+        width: 253px;
+    }
+
+    #email{
+        margin-bottom: 10px;
+        width: 96%;
+    }
+
+    .query-type{
+        flex-direction: row;   
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .form__radio{
+        width: 49%;
+        padding: 20px 0;
+        
+    }
+    
+    #radio{
+        margin-left: 25px;
+    }
+
+    #message{
+        width: 96%;
+        padding: 10px;
+    }
+
+    .form__checkbox{
+        margin: 20px 0;
+    }
+
+    .formulario__botao{
+        width: 94%;
+        padding: 20px 0 40px 0;
+        font-size: 1.2rem;
+    }
+
+    /* message box*/
+
+    .caixa__confirmacao{
+        width: 500px;
+        height: 90px;
+        font-size: 1.2rem;
+        padding: 15px 20px 10px 20px;
+        justify-content: space-around;
+    }
+
+    .caixa__confirmacao__titulo{
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1200px){
+    .card{
+        width: 800px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        padding: 30px 20px 10px 20px;
+    }
+
+    #first_name, #last_name{
+        width: 340px;
+        padding: 5px 15px;
+    }
+
+    #email{
+        width: 95%;
+        padding: 5px 15px;
+    }
+
+    #message{
+        width: 95%;
+        padding: 10px 15px;
+    }
+
+    .form__radio{
+        width: 365px;
+    }
+
+    .formulario__botao{
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* message box*/
+
+    .caixa__confirmacao{
+        width: 500px;
+        height: 90px;
+        font-size: 1.2rem;
+        padding: 15px 20px 10px 20px;
+        justify-content: space-around;
+    }
+}
